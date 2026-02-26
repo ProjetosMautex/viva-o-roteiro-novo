@@ -30,10 +30,11 @@ const BlogPost: React.FC<BlogPostProps> = ({ title, category, image, link, descr
       <h3 className="text-2xl font-serif font-bold text-navy-900 mb-4 leading-tight group-hover:text-gold-600 transition-colors">
         {title}
       </h3>
+      {/* Texto com melhor leitura: gray-800 e medium */}
       <p className="text-gray-800 font-medium mb-6 flex-grow leading-relaxed">
         {description}
       </p>
-      {/* Removido target="_blank" para melhor navegação interna */}
+      {/* Navegação interna otimizada */}
       <a href={link} className="inline-flex items-center text-navy-900 text-sm font-bold uppercase tracking-widest hover:text-gold-600 transition-colors mt-auto">
         Ler Artigo <ArrowRight size={18} className="ml-2 stroke-[3]" />
       </a>
@@ -46,7 +47,7 @@ const BlogSection: React.FC = () => {
     {
       title: 'O que fazer em Paris em 3 dias',
       category: 'Roteiros',
-      // Caminho atualizado conforme sua pasta no VS Code
+      // Buscando da sua pasta local public/images/...
       image: '/images/blog/o-que-fazer-em-paris-em-3-dias/o-que-fazer-em-paris-em-3-dias.webp', 
       link: '/blog/o-que-fazer-em-paris-em-3-dias',
       description: 'Um guia completo dia a dia para otimizar sua visita à Cidade Luz, cobrindo Torre Eiffel, Louvre e Montmartre com logística impecável.'
@@ -54,7 +55,7 @@ const BlogSection: React.FC = () => {
     {
       title: 'Onde comer em Paris',
       category: 'Gastronomia',
-      // Caminho atualizado conforme sua pasta no VS Code
+      // Buscando da sua pasta local public/images/...
       image: '/images/blog/onde-comer-em-paris/onde-comer-em-paris.webp', 
       link: '/blog/onde-comer-em-paris',
       description: 'Os melhores bistrôs, boulangeries e restaurantes que não são armadilhas para turistas. Experiências gastronômicas autênticas.'
@@ -80,6 +81,7 @@ const BlogSection: React.FC = () => {
           ))}
         </div>
         
+        {/* Botão visível apenas no mobile para melhor UX */}
         <div className="mt-12 text-center md:hidden">
             <a href="/blog" className="inline-block text-navy-900 font-bold uppercase text-sm tracking-widest border-b-2 border-navy-900 pb-1">
                 Ver Todos os Posts

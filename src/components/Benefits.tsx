@@ -46,8 +46,8 @@ const Benefits: React.FC = () => {
     <section className="py-24 bg-white relative">
       <div className="container mx-auto px-4 md:px-8">
         <div className="text-center mb-16">
-          {/* Alterado para text-gold-600 para melhor contraste no branco */}
-          <span className="text-gold-600 font-black tracking-[0.2em] uppercase text-sm mb-3 block">Por que 3 Dias?</span>
+          {/* Alterado para text-yellow-700 para melhor contraste no branco */}
+          <span className="text-yellow-700 font-black tracking-[0.2em] uppercase text-sm mb-3 block">Por que 3 Dias?</span>
           <h2 className="text-3xl md:text-5xl font-serif font-bold text-navy-900">Benefícios do Roteiro de 3 Dias</h2>
           <div className="w-24 h-1.5 bg-gold-400 mx-auto mt-6 rounded-full"></div>
         </div>
