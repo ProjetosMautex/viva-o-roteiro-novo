@@ -1,0 +1,19 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header';
+import Footer from '../components/Footer';
+import AuthorProfile from '../components/AuthorProfile';
+import CookieConsent from '../components/CookieConsent';
+
+// Não defina muriloData aqui dentro se estiver dando erro de chaves
+---
+
+<Layout title="Murilo | Especialista Viva o Roteiro">
+  <Header client:load />
+  <main>
+    {/* O componente já tem os dados do Murilo dentro dele agora */}
+    <AuthorProfile client:load />
+  </main>
+  <Footer />
+  <CookieConsent client:load />
+</Layout>

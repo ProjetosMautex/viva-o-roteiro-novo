@@ -1,0 +1,18 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header';
+import Footer from '../components/Footer';
+import AuthorLucas from '../components/AuthorLucas'; // Importa o componente do Lucas
+import CookieConsent from '../components/CookieConsent';
+
+const pageTitle = "Lucas Almeida | Especialista em Paris - Viva o Roteiro";
+---
+
+<Layout title={pageTitle}>
+  <Header client:load />
+  <main>
+    <AuthorLucas client:load />
+  </main>
+  <Footer />
+  <CookieConsent client:load />
+</Layout>

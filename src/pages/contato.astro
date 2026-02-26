@@ -1,0 +1,24 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header';
+import Footer from '../components/Footer';
+import Contact from '../components/Contact';
+import CookieConsent from '../components/CookieConsent';
+
+// O título que aparecerá na aba do navegador
+const pageTitle = "Contato | Viva o Roteiro";
+---
+
+<Layout title={pageTitle}>
+  <Header client:load />
+  
+  <main>
+    {/* Usamos client:load para garantir que o formulário e os ícones 
+      do Lucide-React carreguem corretamente no navegador.
+    */}
+    <Contact client:load />
+  </main>
+
+  <Footer />
+  <CookieConsent client:load />
+</Layout>

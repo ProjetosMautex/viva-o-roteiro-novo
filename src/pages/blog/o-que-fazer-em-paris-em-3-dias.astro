@@ -1,0 +1,23 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Header from '../../components/Header';
+import Footer from '../../components/Footer';
+import CookieConsent from '../../components/CookieConsent';
+
+// O nome do import (Paris3Dias) pode ser qualquer um, 
+// mas o CAMINHO (o que vem depois do 'from') tem que ser igual ao arquivo.
+import Paris3Dias from '../../components/o-que-fazer-em-paris-em-3-dias'; 
+
+const pageTitle = "Roteiro de 3 dias em Paris | Viva o Roteiro";
+---
+
+<Layout title={pageTitle}>
+  <Header client:load />
+  
+  <main>
+    <Paris3Dias client:load />
+  </main>
+
+  <Footer />
+  <CookieConsent client:load />
+</Layout>

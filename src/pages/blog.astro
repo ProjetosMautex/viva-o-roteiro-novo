@@ -1,0 +1,16 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.tsx';
+import Footer from '../components/Footer.tsx';
+import BlogComponent from '../components/Blog.tsx';
+import CookieConsent from '../components/CookieConsent.tsx';
+---
+
+<Layout title="Blog | Viva o Roteiro - Dicas de Paris">
+	<Header client:load />
+	<main>
+		<BlogComponent client:load />
+	</main>
+	<Footer />
+	<CookieConsent client:load />
+</Layout>

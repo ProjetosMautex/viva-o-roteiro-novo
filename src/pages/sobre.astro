@@ -1,0 +1,16 @@
+---
+// src/pages/sobre.astro
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header';
+import Footer from '../components/Footer';
+import About from '../components/About'; 
+import CookieConsent from '../components/CookieConsent'; // 1. Importar o componente
+---
+
+<Layout title="Sobre | Viva o Roteiro">
+  <Header client:load />
+  <main>
+    <About client:visible />
+  </main>
+  <Footer />
+  <CookieConsent client:load /> </Layout>

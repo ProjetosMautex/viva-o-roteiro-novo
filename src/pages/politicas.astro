@@ -1,0 +1,20 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header';
+import Footer from '../components/Footer';
+import Privacy from '../components/Privacy';
+import CookieConsent from '../components/CookieConsent';
+
+const pageTitle = "Políticas de Privacidade | Viva o Roteiro";
+---
+
+<Layout title={pageTitle}>
+  <Header client:load />
+  
+  <main>
+    <Privacy client:load />
+  </main>
+
+  <Footer />
+  <CookieConsent client:load />
+</Layout>

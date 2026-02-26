@@ -1,0 +1,18 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header';
+import Footer from '../components/Footer';
+import AuthorRafael from '../components/AuthorRafael';
+import CookieConsent from '../components/CookieConsent';
+
+const pageTitle = "Rafael Monteiro | Especialista em História e Cultura - Viva o Roteiro";
+---
+
+<Layout title={pageTitle}>
+  <Header client:load />
+  <main>
+    <AuthorRafael client:load />
+  </main>
+  <Footer />
+  <CookieConsent client:load />
+</Layout>
