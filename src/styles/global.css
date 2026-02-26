@@ -2,11 +2,16 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Opcional: Adicione aqui para garantir que as fontes carreguem */
-body {
-  font-family: 'Lato', sans-serif;
-}
+@layer base {
+  body {
+    font-family: 'Lato', sans-serif;
+    /* Melhora a velocidade de renderização inicial */
+    font-display: swap;
+  }
 
-h1, h2, h3, .font-serif {
-  font-family: 'Playfair Display', serif;
+  h1, h2, h3, .font-serif {
+    font-family: 'Playfair Display', serif;
+    /* Garante que o título não fique invisível enquanto a fonte carrega */
+    font-display: swap;
+  }
 }
